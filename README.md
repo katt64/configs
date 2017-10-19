@@ -82,6 +82,12 @@ and powerful than mine, but this really is the best I can come up with, it is
 simple, and it fucking works! I've never been happier in my life with my setup.
 So, what more can I ask?!
 
+This setup works for me just fine. I'm just putting it here to see to it that it
+works for you too, perhaps even better than it does me. I'm using it everyday
+and I'm even earning money from it. I've got a few freelance jobs as a web
+developer (haha, as if I'm so good at it) and I'm using Nroff to typeset
+worksheets and exercises for my mom's students at a school she works. :p
+
 If you are just here to say that my setup is lame, then you'd better scram,
 boii; but if you wanna make a few constructive suggestions that might make my
 life easier, then shoot! I'm quite a busy person. I spend most of my days trying
