@@ -1,0 +1,36 @@
+net-misc/iputils -caps -filecaps
+app-admin/sudo -sendmail
+x11-misc/rofi windowmode
+x11-terms/rxvt-unicode -vanilla 256-color blink fading-colors pixbuf secondary-wheel unicode3 xft
+www-client/firefox hardened pgo
+net-misc/wicd -X -gtk -pm-utils -nls
+app-portage/layman gpg
+media-libs/imlib2 gif jpeg mp3 png tiff
+media-gfx/feh exif
+net-im/bitlbee otr
+media-gfx/gimp exif jpeg lcms png svg tiff udev
+
+# required by x11-drivers/xf86-video-ati-7.9.0::gentoo[glamor]
+# required by x11-base/xorg-drivers-1.19::gentoo[video_cards_radeonsi]
+>=x11-base/xorg-server-1.19.3 glamor
+
+# required by x11-wm/i3-4.13-r1::gentoo
+# required by x11-wm/i3 (argument)
+>=x11-libs/cairo-1.14.8 xcb
+# required by x11-libs/libxkbcommon-0.7.1::gentoo[X]
+# required by x11-misc/i3lock-2.8::gentoo
+# required by i3lock (argument)
+>=x11-libs/libxcb-1.12-r2 xkb
+# required by x11-misc/xdg-utils-1.1.1-r1::gentoo
+# required by sci-mathematics/pari-2.3.5::gentoo[doc,X]
+# required by pari (argument)
+>=app-text/xmlto-0.0.26-r1 text
+# required by www-client/firefox-52.4.0::gentoo[pgo]
+# required by firefox (argument)
+>=x11-base/xorg-server-1.19.3 xvfb
+# required by www-client/firefox-52.4.0::gentoo
+# required by firefox (argument)
+>=dev-lang/python-2.7.12:2.7 sqlite
+# required by www-client/firefox-52.4.0::gentoo
+# required by firefox (argument)
+>=media-libs/libpng-1.6.29 apng
