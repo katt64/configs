@@ -42,6 +42,13 @@ using everyday on my setup (c.f. previous section), and also give me a nice
 repository to store my configuration files that I've worked my blood and sweat
 on **literally**!
 
+All my configuration files are curated from the rootfs `/`, because it has been
+found that `/etc/` contains quite a few interesting configurations I've made.
+Thus, user configurations start in `configs://home/katt/`, where `configs://`
+denotes the rootfs of this repository. Files that could be a concern for my
+security have not been included. You may use the `tree` (app-text/tree) utility
+to visualize the directory hierarchy.
+
 So, there you go. Browse away, it's here for ya. You may modify it to fit your
 needs.
 
