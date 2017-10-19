@@ -219,6 +219,12 @@ bindsym $mod+c exec "urxvtc -e 'gp'; exec i3-msg floating toggle"
 ## File manager (ranger)
 bindsym $mod+x exec "urxvtc -e 'ranger'; exec i3-msg floating toggle"
 
+## Floating terminal (urxvtc)
+bindsym $mod+apostrophe exec "urxvtc; exec i3-msg floating toggle"
+
+## Take screenshots (scrot)
+bindcode 107 exec "/home/katt/.local/bin/takescrot"
+
 ## Switch outputs between two screens
 bindsym $mod+Shift+equal exec "xrandr --output LVDS1 --mode 1366x768"
 bindsym $mod+equal exec "xrandr --output LVDS1 --off"
@@ -226,7 +232,7 @@ bindsym $mod+equal exec "xrandr --output LVDS1 --off"
 ## Volume control
 bindsym $mod+bracketleft exec "amixer set Master 5-"
 bindsym $mod+bracketright exec "amixer set Master 5+"
-bindsym $mod+backslash exec "amixer set Master toggle
+bindsym $mod+backslash exec "amixer set Master toggle"
 
 ## Scratchpad
 bindsym $mod+Shift+minus move scratchpad

@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+if [ ! -d "/tmp/scrots" ]; then
+    mkdir -p /tmp/scrots
+fi
+
+scrot /tmp/scrots/$(date -d now +%s.%N).png
