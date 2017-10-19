@@ -13,11 +13,11 @@ from scratch, running on a native system (not under any kind of hypervisor).
 The following are the windows I have running and what they are doing (top-down,
 left-right order):
 
-- *xdvik* (app-text/xdvik-22.87.03) &mdash; showing a large facetious message.
+- *xdvik* (app-text/xdvik) &mdash; showing a large facetious message.
   :p
-- *vim* (app-editors/vim-8.0.0386) &mdash; editing an Nroff source file for the
+- *vim* (app-editors/vim) &mdash; editing an Nroff source file for the
   facetious message.
-- *htop* (sys-process/htop-2.0.2) &mdash; showing how selfish Firefox can be.
+- *htop* (sys-process/htop) &mdash; showing how selfish Firefox can be.
 - *glxgears* (x11-apps/mesa-progs) &mdash; Hmm&hellip; I don't know what it's
   showing&hellip; Do you? ;p
 - *ranger* (app-misc/ranger) &mdash; browsing some files pertaining to PARI/GP's
