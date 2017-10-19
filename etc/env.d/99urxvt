@@ -1,0 +1,2 @@
+RXVT_SOCKET="/tmp/urxvt-socket"
+TERM_CMD="urxvtc"
