@@ -14,7 +14,7 @@ security reasons. Since the files in `/root/` are almost identical to the ones
 in `/home/katt/`, I found it wise to just not included `/root/` in this
 repository otherwise they would just be redundant.
 
-## *.bg.jpg*
+## *configs://home/katt/.bg.jpg*
 VSCO. Filter: M5.
 
 ## An example of strings being attached
