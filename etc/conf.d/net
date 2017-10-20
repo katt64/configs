@@ -1,0 +1,9 @@
+ifplugd_enp3s0="--api-mode=wlan"
+
+dhcp_enp3s0="nontp"
+dhcp_wlp2s0="nontp"
+
+postup() {
+    /etc/init.d/openvpn-ovpn.se restart
+    return 0
+}
