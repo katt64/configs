@@ -131,28 +131,28 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         ## Resizing containers
         # Coarse setting (jkl;)
-        bindsym j resize shrink width 50 px or 50 ppt
-        bindsym k resize grow height 50 px or 50 ppt
-        bindsym l resize shrink height 50 px or 50 ppt
-        bindsym semicolon resize grow width 50 px or 50 ppt
+        bindsym j resize shrink width 20 px or 20 ppt
+        bindsym k resize grow height 20 px or 20 ppt
+        bindsym l resize shrink height 20 px or 20 ppt
+        bindsym semicolon resize grow width 20 px or 20 ppt
 
         # Coarse setting (arrow keys)
-        bindsym Left resize shrink width 50 px or 50 ppt
-        bindsym Down resize grow height 50 px or 50 ppt
-        bindsym Up resize shrink height 50 px or 50 ppt
-        bindsym Right resize grow width 50 px or 50 ppt
+        bindsym Left resize shrink width 20 px or 20 ppt
+        bindsym Down resize grow height 20 px or 20 ppt
+        bindsym Up resize shrink height 20 px or 20 ppt
+        bindsym Right resize grow width 20 px or 20 ppt
 
         # Fine setting (uiop)
-        bindsym u resize shrink width 20 px or 20 ppt
-        bindsym i resize grow height 20 px or 20 ppt
-        bindsym o resize shrink height 20 px or 20 ppt
-        bindsym p resize grow width 20 px or 20 ppt
+        bindsym u resize shrink width 10 px or 10 ppt
+        bindsym i resize grow height 10 px or 10 ppt
+        bindsym o resize shrink height 10 px or 10 ppt
+        bindsym p resize grow width 10 px or 10 ppt
 
         # Extra-fine setting (7890)
-        bindsym 7 resize shrink width 10 px or 10 ppt
-        bindsym 8 resize grow height 10 px or 10 ppt
-        bindsym 9 resize shrink height 10 px or 10 ppt
-        bindsym 0 resize grow width 10 px or 10 ppt
+        bindsym 7 resize shrink width 5 px or 5 ppt
+        bindsym 8 resize grow height 5 px or 5 ppt
+        bindsym 9 resize shrink height 5 px or 5 ppt
+        bindsym 0 resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or q
         bindsym Return mode "default"

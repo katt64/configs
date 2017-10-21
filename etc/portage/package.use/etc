@@ -2,7 +2,7 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -sendmail
 x11-misc/rofi windowmode
 x11-terms/rxvt-unicode -vanilla 256-color blink fading-colors pixbuf secondary-wheel unicode3 xft
-www-client/firefox hardened pgo
+www-client/firefox hardened
 net-misc/wicd -X -gtk -pm-utils -nls
 app-portage/layman gpg
 media-libs/imlib2 gif jpeg mp3 png tiff
@@ -34,3 +34,6 @@ media-gfx/gimp exif jpeg lcms png svg tiff udev
 # required by www-client/firefox-52.4.0::gentoo
 # required by firefox (argument)
 >=media-libs/libpng-1.6.29 apng
+# required by app-text/zathura-pdf-poppler-0.2.7::gentoo
+# required by zathura-pdf-poppler (argument)
+>=app-text/poppler-0.57.0 cairo
