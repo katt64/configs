@@ -18,7 +18,7 @@
 alias gf="gfortran"
 alias markdown="markdown_py"
 
-export PATH="${PATH}:/home/katt/.local/bin"
+export PATH="${PATH}:~/.local/bin"
 
 ## Inform users about upgrade path for grml's old zshrc layout, assuming that:
 ## /etc/skel/.zshrc was installed as ~/.zshrc,

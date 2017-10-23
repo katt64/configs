@@ -1,7 +1,7 @@
 net-misc/iputils -caps -filecaps
 app-admin/sudo -sendmail
 x11-misc/rofi windowmode
-x11-terms/rxvt-unicode -vanilla 256-color blink fading-colors pixbuf secondary-wheel unicode3 xft
+x11-terms/rxvt-unicode -vanilla 256-color blink fading-colors iso14755 pixbuf secondary-wheel unicode3 wcwidth xft
 www-client/firefox hardened
 net-misc/wicd -X -gtk -pm-utils -nls
 app-portage/layman gpg
