@@ -15,7 +15,7 @@ in `/home/katt/`, I found it wise to just not included `/root/` in this
 repository otherwise they would just be redundant.
 
 ## *configs://home/katt/.bg.jpg*
-VSCO. Filter: M5.
+VSCO Filter: M5. This image is CC0. You can do whatever the fuck you want with it.
 
 ## An example of strings being attached
 In this directory, files that have been copyrighted and licensed by their
