@@ -103,7 +103,238 @@ everyone no matter what I do. I still cannot fathom how most people can spend so
 much time having the best of all UNIX setups and yet seem to live out life so
 fine. So, understand that.
 
-## List of installed packages
+## Subtleties
+Below this, you'll find some subtleties regarding my setup. If you don't
+really care about the specifics or details, you may happily skip; but if you do,
+this section may very well provide for much of your needs.
+
+### Gentoo's portage stuff
+#### `emerge`'s information
+Running `emerge --info`, I get some information on the inner-workings of emerge.
+
+```
+Portage 2.3.8 (python 3.4.5-final-0, default/linux/amd64/13.0, gcc-5.4.0, glibc-2.23-r4, 4.12.12-gentoo x86_64)
+=================================================================
+System uname: Linux-4.12.12-gentoo-x86_64-Intel-R-_Core-TM-_i5-2450M_CPU_@_2.50GHz-with-gentoo-2.4.1
+KiB Mem:     8083980 total,   6864756 free
+KiB Swap:          0 total,         0 free
+Timestamp of repository gentoo: Sun, 22 Oct 2017 00:45:01 +0000
+Head commit of repository gentoo: 0d07663c199183c31d038261bec0cf8c550e61de
+sh bash 4.3_p48-r1
+ld GNU ld (Gentoo 2.28.1 p1.0) 2.28.1
+app-shells/bash:          4.3_p48-r1::gentoo
+dev-lang/perl:            5.24.3::gentoo
+dev-lang/python:          2.7.12::gentoo, 3.4.5::gentoo
+dev-util/cmake:           3.8.2::gentoo
+dev-util/pkgconfig:       0.28-r2::gentoo
+sys-apps/baselayout:      2.4.1-r2::gentoo
+sys-apps/openrc:          0.32.1::gentoo
+sys-apps/sandbox:         2.10-r3::gentoo
+sys-devel/autoconf:       2.13::gentoo, 2.69::gentoo
+sys-devel/automake:       1.11.6-r1::gentoo, 1.15-r2::gentoo
+sys-devel/binutils:       2.28.1::gentoo
+sys-devel/gcc:            5.4.0-r3::gentoo
+sys-devel/gcc-config:     1.8-r1::gentoo
+sys-devel/libtool:        2.4.6-r3::gentoo
+sys-devel/make:           4.2.1::gentoo
+sys-kernel/linux-headers: 4.4::gentoo (virtual/os-headers)
+sys-libs/glibc:           2.23-r4::gentoo
+Repositories:
+
+gentoo
+    location: /usr/portage
+    sync-type: rsync
+    sync-uri: rsync://rsync.gentoo.org/gentoo-portage
+    priority: -1000
+
+4nykey
+    location: /var/lib/layman/4nykey
+    masters: gentoo
+    priority: 50
+
+eva
+    location: /var/lib/layman/eva
+    masters: gentoo
+    priority: 50
+
+jorgicio
+    location: /var/lib/layman/jorgicio
+    masters: gentoo
+    priority: 50
+
+ABI="amd64"
+ABI_X86="64"
+ACCEPT_KEYWORDS="amd64"
+ACCEPT_LICENSE="* -@EULA"
+ACCEPT_PROPERTIES="*"
+ACCEPT_RESTRICT="*"
+ALSA_CARDS="ali5451 als4000 atiixp atiixp-modem bt87x ca0106 cmipci emu10k1x ens1370 ens1371 es1938 es1968 fm801 hda-intel intel8x0 intel8x0m maestro3 trident usb-audio via82xx via82xx-modem ymfpci"
+APACHE2_MODULES="authn_core authz_core socache_shmcb unixd actions alias auth_basic authn_alias authn_anon authn_dbm authn_default authn_file authz_dbm authz_default authz_groupfile authz_host authz_owner authz_user autoindex cache cgi cgid dav dav_fs dav_lock deflate dir disk_cache env expires ext_filter file_cache filter headers include info log_config logio mem_cache mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias"
+ARCH="amd64"
+AUTOCLEAN="yes"
+BOOTSTRAP_USE="cxx unicode internal-glib python_targets_python3_4 python_targets_python2_7 multilib"
+CALLIGRA_FEATURES="kexi words flow plan sheets stage tables krita karbon braindump author"
+CBUILD="x86_64-pc-linux-gnu"
+CFLAGS="-march=native -O2 -pipe"
+CFLAGS_amd64="-m64"
+CFLAGS_x32="-mx32"
+CFLAGS_x86="-m32"
+CHOST="x86_64-pc-linux-gnu"
+CHOST_amd64="x86_64-pc-linux-gnu"
+CHOST_x32="x86_64-pc-linux-gnux32"
+CHOST_x86="i686-pc-linux-gnu"
+CLEAN_DELAY="5"
+COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog"
+COLLISION_IGNORE="/lib/modules/* *.py[co] *$py.class */dropin.cache"
+COLORFGBG="7;default;0"
+COLORTERM="yes"
+CONFIG_PROTECT="/etc /usr/share/gnupg/qualified.txt"
+CONFIG_PROTECT_MASK="/etc/ca-certificates.conf /etc/env.d /etc/fonts/fonts.conf /etc/gconf /etc/gentoo-release /etc/revdep-rebuild /etc/sandbox.d /etc/terminfo /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/texmf/web2c /usr/bin/pass /usr/bin/startx"
+CPU_FLAGS_X86="aes avx mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+CXXFLAGS="-march=native -O2 -pipe"
+DEFAULT_ABI="amd64"
+DESKTOP_STARTUP_ID="i3/urxvtc/10138-12-gentoo_TIME2211260"
+DISPLAY=":0"
+DISTDIR="/usr/portage/distfiles"
+EDITOR="/usr/bin/vi"
+ELIBC="glibc"
+EMERGE_DEFAULT_OPTS="--ask --verbose"
+EMERGE_WARNING_DELAY="10"
+EPREFIX=""
+EROOT="/"
+FCFLAGS="-march=native -O2 -pipe"
+FEATURES="assume-digests binpkg-logs candy clean-logs config-protect-if-modified distlocks ebuild-locks fail-clean fixlafiles merge-sync multilib-strict news parallel-fetch parallel-install preserve-libs protect-owned sandbox sfperms strict stricter unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync webrsync-gpg xattr"
+FETCHCOMMAND="wget -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
+FETCHCOMMAND_RSYNC="rsync -avP "${URI}" "${DISTDIR}/${FILE}""
+FETCHCOMMAND_SFTP="bash -c "x=\${2#sftp://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; eval \"declare -a ssh_opts=(\${3})\" ; exec sftp \${port:+-P \${port}} \"\${ssh_opts[@]}\" \"\${host}:/\${x#*/}\" \"\$1\"" sftp "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FETCHCOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FFLAGS="-march=native -O2 -pipe"
+GCC_SPECS=""
+GENTOO_MIRRORS="ftp://mirror.mdfnet.se/gentoo http://mirror.mdfnet.se/gentoo"
+GPSD_PROTOCOLS="ashtech aivdm earthmate evermore fv18 garmin garmintxt gpsclock isync itrax mtk3301 nmea ntrip navcom oceanserver oldstyle oncore rtcm104v2 rtcm104v3 sirf skytraq superstar2 timing tsip tripmate tnt ublox ubx"
+GRUB_PLATFORMS="pc"
+HOME="/home/katt"
+HUSHLOGIN="FALSE"
+INFOPATH="/usr/share/gcc-data/x86_64-pc-linux-gnu/5.4.0/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.28.1/info:/usr/share/info"
+INPUT_DEVICES="libinput keyboard mouse"
+IUSE_IMPLICIT="abi_x86_64 prefix prefix-chain prefix-guest"
+KERNEL="linux"
+L10N="en sv"
+LANG="en_US.utf8"
+LCD_DEVICES="bayrad cfontz cfontz633 glk hd44780 lb216 lcdm001 mtxorb ncurses text"
+LC_MESSAGES="C"
+LDFLAGS="-Wl,-O1 -Wl,--as-needed"
+LDFLAGS_amd64="-m elf_x86_64"
+LDFLAGS_x32="-m elf32_x86_64"
+LDFLAGS_x86="-m elf_i386"
+LESS="-R -M --shift 5"
+LESSOPEN="|lesspipe %s"
+LESS_TERMCAP_mb="[01;31m"
+LESS_TERMCAP_md="[01;31m"
+LESS_TERMCAP_me="[0m"
+LESS_TERMCAP_se="[0m"
+LESS_TERMCAP_so="[01;44;33m"
+LESS_TERMCAP_ue="[0m"
+LESS_TERMCAP_us="[01;32m"
+LIBDIR_amd64="lib64"
+LIBDIR_x32="libx32"
+LIBDIR_x86="lib32"
+LIBREOFFICE_EXTENSIONS="presenter-console presenter-minimizer"
+LINGUAS="en sv"
+LOGNAME="katt"
+LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.cfg=00;32:*.conf=00;32:*.diff=00;32:*.doc=00;32:*.ini=00;32:*.log=00;32:*.patch=00;32:*.pdf=00;32:*.ps=00;32:*.tex=00;32:*.txt=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+MAIL="/var/mail/katt"
+MAKEOPTS="-j4"
+MANPAGER="manpager"
+MANPATH="/usr/share/gcc-data/x86_64-pc-linux-gnu/5.4.0/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.28.1/man:/usr/local/share/man:/usr/share/man"
+MULTILIB_ABIS="amd64 x86"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
+MULTILIB_STRICT_DIRS="/lib32 /lib /usr/lib32 /usr/lib /usr/kde/*/lib32 /usr/kde/*/lib /usr/qt/*/lib32 /usr/qt/*/lib /usr/X11R6/lib32 /usr/X11R6/lib"
+MULTILIB_STRICT_EXEMPT="(perl5|gcc|gcc-lib|binutils|eclipse-3|debug|portage|udev|systemd|clang|python-exec|llvm)"
+MYVIMRC="/home/katt/.vimrc"
+NETBEANS="apisupport cnd groovy gsf harness ide identity j2ee java mobility nb php profiler soa visualweb webcommon websvccommon xml"
+NOCOLOR="true"
+OFFICE_IMPLEMENTATION="libreoffice"
+OLDPWD="/home/katt/configs"
+OPENGL_PROFILE="xorg-x11"
+PAGER="/usr/bin/less"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/5.4.0:/opt/bin:/home/katt/.local/bin"
+PHP_TARGETS="php5-6"
+PKGDIR="/usr/portage/packages"
+PORTAGE_ARCHLIST="alpha amd64 amd64-fbsd amd64-linux arm arm-linux arm64 arm64-linux hppa ia64 m68k m68k-mint mips nios2 ppc ppc-aix ppc-macos ppc64 ppc64-linux riscv s390 sh sparc sparc-fbsd sparc-solaris sparc64-solaris x64-cygwin x64-macos x64-solaris x86 x86-cygwin x86-fbsd x86-linux x86-macos x86-solaris x86-winnt"
+PORTAGE_BIN_PATH="/usr/lib/portage/python3.4"
+PORTAGE_COMPRESS_EXCLUDE_SUFFIXES="css gif htm[l]? jp[e]?g js pdf png"
+PORTAGE_CONFIGROOT="/"
+PORTAGE_DEBUG="0"
+PORTAGE_DEPCACHEDIR="/var/cache/edb/dep"
+PORTAGE_ELOG_CLASSES="log warn error"
+PORTAGE_ELOG_MAILFROM="portage@localhost"
+PORTAGE_ELOG_MAILSUBJECT="[portage] ebuild log for ${PACKAGE} on ${HOST}"
+PORTAGE_ELOG_MAILURI="root"
+PORTAGE_ELOG_SYSTEM="save_summary:log,warn,error,qa echo"
+PORTAGE_FETCH_CHECKSUM_TRY_MIRRORS="5"
+PORTAGE_FETCH_RESUME_MIN_SIZE="350K"
+PORTAGE_GID="250"
+PORTAGE_GPG_DIR="/var/lib/gentoo/gkeys/keyrings/gentoo/release"
+PORTAGE_GPG_SIGNING_COMMAND="gpg --sign --digest-algo SHA256 --clearsign --yes --default-key "${PORTAGE_GPG_KEY}" --homedir "${PORTAGE_GPG_DIR}" "${FILE}""
+PORTAGE_INST_GID="0"
+PORTAGE_INST_UID="0"
+PORTAGE_INTERNAL_CALLER="1"
+PORTAGE_OVERRIDE_EPREFIX=""
+PORTAGE_PYM_PATH="/usr/lib64/python3.4/site-packages"
+PORTAGE_PYTHONPATH="/usr/lib64/python3.4/site-packages"
+PORTAGE_RSYNC_OPTS="--recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --exclude=/local --exclude=/packages --exclude=/.git"
+PORTAGE_RSYNC_RETRIES="-1"
+PORTAGE_SYNC_STALE="30"
+PORTAGE_TMPDIR="/var/tmp"
+PORTAGE_VERBOSE="1"
+PORTAGE_WORKDIR_MODE="0700"
+PORTAGE_XATTR_EXCLUDE="btrfs.* security.evm security.ima 	security.selinux system.nfs4_acl"
+PORT_LOGDIR_CLEAN="find "${PORT_LOGDIR}" -type f ! -name "summary.log*" -mtime +7 -delete"
+POSTGRES_TARGETS="postgres9_5"
+PROFILE_ONLY_VARIABLES="ARCH ELIBC IUSE_IMPLICIT KERNEL USERLAND USE_EXPAND_IMPLICIT USE_EXPAND_UNPREFIXED USE_EXPAND_VALUES_ARCH USE_EXPAND_VALUES_ELIBC USE_EXPAND_VALUES_KERNEL USE_EXPAND_VALUES_USERLAND"
+PWD="/home/katt/configs"
+PYTHONDONTWRITEBYTECODE="1"
+PYTHON_SINGLE_TARGET="python3_4"
+PYTHON_TARGETS="python2_7 python3_4"
+RESUMECOMMAND="wget -c -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
+RESUMECOMMAND_RSYNC="rsync -avP "${URI}" "${DISTDIR}/${FILE}""
+RESUMECOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+ROOT="/"
+ROOTPATH="/usr/x86_64-pc-linux-gnu/gcc-bin/5.4.0:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin"
+RPMDIR="/usr/portage/rpm"
+RUBY_TARGETS="ruby22"
+RXVT_SOCKET="/tmp/urxvt-socket"
+SHELL="/bin/zsh"
+SHLVL="3"
+SYMLINK_LIB="yes"
+TERM="rxvt-unicode-256color"
+TERM_CMD="urxvtc"
+TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE="1"
+UNINSTALL_IGNORE="/lib/modules/* /var/run /var/lock"
+USE="X acl alsa amd64 berkdb bzip2 cli cracklib crypt cxx dri fortran gdbm hardened iconv ipv6 logrotate modules multilib ncurses nls nptl openmp pam pcre readline seccomp secure-delete session ssl tcpd unicode xattr zlib zsh-completion" ABI_X86="64" ALSA_CARDS="ali5451 als4000 atiixp atiixp-modem bt87x ca0106 cmipci emu10k1x ens1370 ens1371 es1938 es1968 fm801 hda-intel intel8x0 intel8x0m maestro3 trident usb-audio via82xx via82xx-modem ymfpci" APACHE2_MODULES="authn_core authz_core socache_shmcb unixd actions alias auth_basic authn_alias authn_anon authn_dbm authn_default authn_file authz_dbm authz_default authz_groupfile authz_host authz_owner authz_user autoindex cache cgi cgid dav dav_fs dav_lock deflate dir disk_cache env expires ext_filter file_cache filter headers include info log_config logio mem_cache mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias" CALLIGRA_FEATURES="kexi words flow plan sheets stage tables krita karbon braindump author" COLLECTD_PLUGINS="df interface irq load memory rrdtool swap syslog" CPU_FLAGS_X86="aes avx mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3" ELIBC="glibc" GPSD_PROTOCOLS="ashtech aivdm earthmate evermore fv18 garmin garmintxt gpsclock isync itrax mtk3301 nmea ntrip navcom oceanserver oldstyle oncore rtcm104v2 rtcm104v3 sirf skytraq superstar2 timing tsip tripmate tnt ublox ubx" GRUB_PLATFORMS="pc" INPUT_DEVICES="libinput keyboard mouse" KERNEL="linux" L10N="en sv" LCD_DEVICES="bayrad cfontz cfontz633 glk hd44780 lb216 lcdm001 mtxorb ncurses text" LIBREOFFICE_EXTENSIONS="presenter-console presenter-minimizer" LINGUAS="en sv" OFFICE_IMPLEMENTATION="libreoffice" PHP_TARGETS="php5-6" POSTGRES_TARGETS="postgres9_5" PYTHON_SINGLE_TARGET="python3_4" PYTHON_TARGETS="python2_7 python3_4" RUBY_TARGETS="ruby22" USERLAND="GNU" VIDEO_CARDS="intel nouveau" XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipset ipp2p iface geoip fuzzy condition tee tarpit sysrq steal rawnat logmark ipmark dhcpmac delude chaos account"
+USER="katt"
+USERLAND="GNU"
+USE_EXPAND="ABI_MIPS ABI_PPC ABI_S390 ABI_X86 ALSA_CARDS APACHE2_MODULES APACHE2_MPMS CALLIGRA_EXPERIMENTAL_FEATURES CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_X86 CROSSCOMPILE_OPTS CURL_SSL ELIBC ENLIGHTENMENT_MODULES FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LINGUAS LIRC_DEVICES LLVM_TARGETS MONKEYD_PLUGINS NETBEANS_MODULES NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFED_DRIVERS OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS ROS_MESSAGES RUBY_TARGETS SANE_BACKENDS USERLAND UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XFCE_PLUGINS XTABLES_ADDONS"
+USE_EXPAND_HIDDEN="ABI_MIPS ABI_PPC ABI_S390 CPU_FLAGS_ARM CROSSCOMPILE_OPTS ELIBC KERNEL USERLAND"
+USE_EXPAND_IMPLICIT="ARCH ELIBC KERNEL USERLAND"
+USE_EXPAND_UNPREFIXED="ARCH"
+USE_EXPAND_VALUES_ARCH="alpha amd64 amd64-fbsd amd64-linux arm arm-linux arm64 hppa ia64 m68k m68k-mint mips nios2 ppc ppc64 ppc64-linux ppc-aix ppc-macos riscv s390 sh sparc sparc64-solaris sparc-fbsd sparc-solaris x64-cygwin x64-macos x64-solaris x86 x86-cygwin x86-fbsd x86-linux x86-macos x86-solaris x86-winnt"
+USE_EXPAND_VALUES_ELIBC="AIX bionic Cygwin Darwin DragonFly FreeBSD glibc HPUX Interix mingw mintlib musl NetBSD OpenBSD SunOS uclibc Winnt"
+USE_EXPAND_VALUES_KERNEL="AIX Darwin FreeBSD freemint HPUX linux NetBSD OpenBSD SunOS Winnt"
+USE_EXPAND_VALUES_USERLAND="BSD GNU"
+USE_ORDER="env:pkg:conf:defaults:pkginternal:repo:env.d"
+VIDEO_CARDS="intel nouveau"
+VIM="/usr/share/vim"
+VIMRUNTIME="/usr/share/vim/vim80"
+VIM_PLEASE_SET_TITLE="yes"
+WINDOWID="14680375"
+WINDOWPATH="7"
+XAUTHORITY="/home/katt/.Xauthority"
+XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipset ipp2p iface geoip fuzzy condition tee tarpit sysrq steal rawnat logmark ipmark dhcpmac delude chaos account"
+```
+
+#### List of installed packages
 Running `equery list "*"`, I get a list of all the packages I have installed on
 my computer. Feel free to pick them as you wish. :p
 
@@ -650,4 +881,40 @@ x11-themes/gnome-themes-standard-3.22.3
 x11-themes/gtk-engines-adwaita-3.22.3
 x11-themes/hicolor-icon-theme-0.15
 x11-wm/i3-4.13-r1
+```
+
+### Installed Vim plugins
+Vim plugins are installed with the help of
+[tpope/vim-pathogen](https://github.com/tpope/vim-pathogen). Here are all the
+Vim plugin's installed, placed in `~/.vim/bundle`. They are not included in this
+configurations repository.
+
+```
+~/.vim/bundle/
+├── emmet-vim
+├── lean.vim
+├── lightline.vim
+├── linediff.vim
+└── loremipsum
+
+5 directories, 0 files
+```
+
+### `iptables` rules
+Some `iptables` (net-firewall/iptables) rules. I don't know where to put them.
+
+```
+katt@gentoo ~ % sudo iptables -S 
+-P INPUT DROP
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 6667 -j ACCEPT
+
+katt@gentoo ~ % sudo ip6tables -S 
+-P INPUT DROP
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 6667 -j ACCEPT
 ```
