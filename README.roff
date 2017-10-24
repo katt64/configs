@@ -1,88 +1,160 @@
-# *configs* &mdash; My best battlestation configurations
+.de HR \" HeadeR (auto-triggered when 0u from top of page)
+'sp 0.3i
+.ft R
+.ps 10
+.tl 'katt64/configs.git Official ReadMe''%'
+.ps
+.ft
+'sp 0.3i
+..
+.wh 0u HR
+.de NP \" New Page (auto-triggered when 1i from bottom of page)
+'bp
+..
+.wh -1i NP
+.de H1 \" 1st-order heading
+.sp 0.2i
+.ft B
+.ps 18
+\\$1
+.ps
+.ft
+.sp 0.1i
+..
+.de H2 \" 2nd-order heading
+.sp 0.2i
+.ft B
+.ps 16
+\\$1
+.ps
+.ft
+.sp 0.1i
+..
+.de H3 \" 3rd-order heading
+.sp 0.2i
+.ft B
+.ps 14
+\\$1
+.ps
+.ft
+.sp 0.1i
+..
+.de H4 \" 4th-order heading
+.sp 0.2i
+.ft B
+.ps 12
+\\$1
+.ps
+.ft
+.sp 0.1i
+..
+.de BB \" Block Begin
+.sp 0.1i
+.in +0.3i
+.ft R
+..
+.de BE \" Block End
+.sp 0.1i
+.in -0.3i
+.ft R
+..
+.de CB \" Code block Begin
+.BB
+.ft C
+.nf
+..
+.de CE \" Code block End
+.BE
+.fi
+..
+.de LI \" List Item
+\s+9\v'+0.125m'\(md\v'-0.125m'\s0\h'+1m'\\$1
+.br
+..
+\
+\ \" String Macros
+\
+.ds h .\h'-0.05m'.\h'-0.05m'.
+\
+\ \" Begin Document
+\
+.H1 "katt64/configs.git: My best battlestation configurations"
+This is an nroffed document transcribed from the official README file, \fCREADME.md\fP, from the git repository (\fCgithub://katt64/configs.git\fP). The transcription was done on October 24, 2017 by Stephanie Björk (katt64).
 
-<a href="https://i.imgur.com/Wo74HQl.png" target="_blank">
-<img src="https://i.imgur.com/Wo74HQl.png" alt="My battlestation screenshotted
-from userland" style="display: block; width: 90%; margin: 5vh auto;">
-</a>
+As of now, I don't have the kind of time to touch nroff's \fCpic\fP program, so pictures do not render here. If you want to see images (e.g., screenshots), you need to render the Markdown in the official README file (\fCREADME.md\fP).
 
-## Screenshot description
-The screenshot is my battlestation screnshotted from userland (not from the
-screen) using `screenfetch -s`. The operating supervisor is Gentoo, configured
-from scratch, running on a native system (not under any kind of hypervisor).
+.H2 "Screenshot description"
+.ul
+If you've successfully rendered the Markdown-formatted README file successfully, you'll understand what I mean when I say ``the screenshot.'' It is a screenshot of my battlestation. Without the \fCpic\fP program (which I dare not touch yet), troff cannot render images. To clarify, my screenshot will not appear in this document for that reason. To view the screenshot, you need to render the Markdown in the official README file (\fCREADME.md\fP) in such a way that images can be viewed..
 
-The following are the windows I have running and what they are doing (top-down,
-left-right order):
+The screenshot is my battlestation screnshotted from userland (not from the physical screen) using \fCscreenfetch -s\fP. The operating supervisor is Gentoo, configured from scratch, running on a native system (not under any kind of hypervisor).
 
-- *xdvik* (app-text/xdvik) &mdash; showing a large facetious message.
-  :p
-- *vim* (app-editors/vim) &mdash; editing an Nroff source file for the
-  facetious message.
-- *htop* (sys-process/htop) &mdash; showing how selfish Firefox can be.
-- *glxgears* (x11-apps/mesa-progs) &mdash; Hmm&hellip; I don't know what it's
-  showing&hellip; Do you? ;p
-- *ranger* (app-misc/ranger) &mdash; browsing some files pertaining to PARI/GP's
-  compilation process
-- *screenfetch* (app-misc/screenfetch) &mdash; Captures the screen at the
-  instance *you* can see now.
-
+The following are the windows I have running and what they are doing (top-down, left-right order):
+.BB
+.LI "\fIxdvik\fP (app-text/xdvik) \(em showing a large facetious message. :p"
+.LI "\fIvim\fP (app-editors/vim) \(em editing an Nroff source file for the facetious message."
+.LI "\fIhtop\fP (sys-process/htop) \(em showing how selfish Firefox can be."
+.LI "\fIglxgears\fP (x11-apps/mesa-progs) \(em Hmm\*h I don't know what it's showing\*h Do you? ;p"
+.LI "\fIranger\fP (app-misc/ranger) \(em browsing some files pertaining to PARI/GP's compilation process."
+.LI "\fIscreenfetch\fP (app-misc/screenfetch) \(em Captures the screen at the instance \fByou\fP can see now."
+.BE
 A few subtleties include:
+.BB
+.LI "The\ wallpaper\ in\ the\ background (\fChttps://vsco.co/katt64/media/59e8cd0855f6ec424cf50516\fP). It's about a trivial problem, really. :p"
+.LI "The VPN provider I'm using provides me with IPv6!!! <3"
+.LI "I'm running this battlestation on one laptop connected to an external keyboard, wireless mouse, HDMI monitor, and occasionally an external floppy disk drive to retrieve legacy data. :3"
+.BE
 
-- [The wallpaper in the
-  background](https://vsco.co/katt64/media/59e8cd0855f6ec424cf50516). It's about
-  a trivial problem, really. :p
-- The VPN provider I'm using provides me with IPv6!!! <3
-- I'm running this battlestation on one laptop connected to an external
-  keyboard, wireless mouse, HDMI monitor, and occasionally an external floppy
-  disk drive to retrieve legacy data. :3
-
-## This!
+.H2 "This!"
 This repository intends to openly and freely share with the public domain (you
-and everyone) an idea of a *minimal, but very useful* configuration that I'm
+and everyone) an idea of a \fIminimal, but very useful\fP configuration that I'm
 using everyday on my setup (c.f. previous section), and also give me a nice
 repository to store my configuration files that I've worked my blood and sweat
-on **literally**!
+on, \fIliterally\fP!
 
-All my configuration files are curated from the rootfs `/`, because it has been
-found that `/etc/` contains quite a few interesting configurations I've made.
-Thus, user configurations start in `configs://home/katt/`, where `configs://`
+All my configuration files are curated from the rootfs \fC/\fP, because it has been
+found that \fC/etc/\fP contains quite a few interesting configurations I've made.
+Thus, user configurations start in \fCconfigs://home/katt/\fP, where \fCconfigs://\fP
 denotes the rootfs of this repository. Files that could be a concern for my
-security have not been included. You may use the `tree` (app-text/tree) utility
+security have not been included. You may use the \fCtree\fP (app-text/tree) utility
 to visualize the directory hierarchy.
 
 So, there you go. Browse away, it's here for ya. You may modify it to fit your
 needs.
 
-## Any strings attached?
-*Long answer short: no. Are you human, though?*
+.H2 "Any strings attached?"
+.ul
+Long answer short: no. Are you human, though?
 
 I don't assume any rights on any of my configuration work present in this
 repository. However, if any files in here are protected by someone else's
 copyright (this happens with software written by other people), then that
 entity's copyright rules apply, but I just won't mention it because I don't know
-much about laws 'n shit. (I'm a rebel!) :p
+much about laws 'n shit. \fII'm a rebel!\fP :p
 
 So, You can use my configuration files however you want. It's literally just
 free, no strings attached, but just be mindful of other people's
-already-imposed copyright that we might not know about. You **need not** credit
+already-imposed copyright that we might not know about. You \fBneed not\fP credit
 me when using my configurations from here, but if you want to, of course, you
 can! :) Just don't let creditting work bother you; life is too short to be
 bothered by other people's shit.
 
 Oh, one slight caveat I'd like to point out is that, I really urge that you be
-mindful and very polite when commenting or reporting "issues" in my
+mindful and very polite when commenting or reporting ``issues'' in my
 configurations. Don't roast, troll, negatively criticize me, or hurt my
-feelings; that's happened before and it's just not cool. If you have "issues"
+feelings; that's happened before and it's just not cool. If you have ``issues''
 with my configurations, it means you have issues with my preferences; my
 preferences are mine, and if it bothers you, it's your problem! Right? Let's be
-honest about that. So, just &hellip; **be human, be nice**.
+honest about that. So, just \*h \fBbe human, be nice\fP.
 
 Of course, I'd like to hear suggestions if it's easy for me to digest and use in
 my everyday life. The general rule is just that: if you are greater than 50%
 certain that what you're about to say to me will not make me a better person,
-but will in fact make me much worse off, **don't say it**.
+but will in fact make me much worse off, \fBdon't say it\fP.
 
-### "But &hellip; Your setup is lame!"
-*So, you really wanna break my heart, huh? Haha. It's okey. :p*
+.H2 "But \*h Your setup is lame!"
+.ul
+So, you really wanna break my heart, huh? Haha. It's okey. :p
 
 I mean, seriously, I know that other guys' setups are much more sophisticated
 and powerful than mine, but this really is the best I can come up with, it is
@@ -103,17 +175,20 @@ everyone no matter what I do. I still cannot fathom how most people can spend so
 much time having the best of all UNIX setups and yet seem to live out life so
 fine. So, understand that.
 
-## Subtleties
+.H2 "Subtleties"
+.ul
+Blocks of code below are reproduced extremely poorly in nroff. It is not for the faint of heart! Please refer to the markdown file (\fCREADME.md\fP) for more properly-typeset code.
+
 Below this, you'll find some subtleties regarding my setup. If you don't
 really care about the specifics or details, you may happily skip; but if you do,
 this section may very well provide for much of your needs.
 
-### Gentoo's portage stuff
-#### `emerge`'s information
-Running `emerge --info`, I get some information on the inner-workings of
-`emerge` .
+.H3 "Gentoo's portage stuff"
+These are mostly Gentoo-specific details. If you aren't using Gentoo like I am, you can skip this.
 
-```
+.H4 "emerge's information"
+Running \fCemerge --info\fP, I get some information on the inner-workings of \fCemerge\fP.
+.CB
 Portage 2.3.8 (python 3.4.5-final-0, default/linux/amd64/13.0, gcc-5.4.0, glibc-2.23-r4, 4.12.12-gentoo x86_64)
 =================================================================
 System uname: Linux-4.12.12-gentoo-x86_64-Intel-R-_Core-TM-_i5-2450M_CPU_@_2.50GHz-with-gentoo-2.4.1
@@ -207,8 +282,8 @@ FCFLAGS="-march=native -O2 -pipe"
 FEATURES="assume-digests binpkg-logs candy clean-logs config-protect-if-modified distlocks ebuild-locks fail-clean fixlafiles merge-sync multilib-strict news parallel-fetch parallel-install preserve-libs protect-owned sandbox sfperms strict stricter unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync webrsync-gpg xattr"
 FETCHCOMMAND="wget -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
 FETCHCOMMAND_RSYNC="rsync -avP "${URI}" "${DISTDIR}/${FILE}""
-FETCHCOMMAND_SFTP="bash -c "x=\${2#sftp://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; eval \"declare -a ssh_opts=(\${3})\" ; exec sftp \${port:+-P \${port}} \"\${ssh_opts[@]}\" \"\${host}:/\${x#*/}\" \"\$1\"" sftp "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
-FETCHCOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FETCHCOMMAND_SFTP="bash -c "x=\e${2#sftp://} ; host=\e${x%%/*} ; port=\e${host##*:} ; host=\e${host%:*} ; [[ \e${host} = \e${port} ]] && port= ; eval \e"declare -a ssh_opts=(\e${3})\e" ; exec sftp \e${port:+-P \e${port}} \e"\e${ssh_opts[@]}\e" \e"\e${host}:/\e${x#*/}\e" \e"\e$1\e"" sftp "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+FETCHCOMMAND_SSH="bash -c "x=\e${2#ssh://} ; host=\e${x%%/*} ; port=\e${host##*:} ; host=\e${host%:*} ; [[ \e${host} = \e${port} ]] && port= ; exec rsync --rsh=\e"ssh \e${port:+-p\e${port}} \e${3}\e" -avP \e"\e${host}:/\e${x#*/}\e" \e"\e$1\e"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
 FFLAGS="-march=native -O2 -pipe"
 GCC_SPECS=""
 GENTOO_MIRRORS="ftp://mirror.mdfnet.se/gentoo http://mirror.mdfnet.se/gentoo"
@@ -300,7 +375,7 @@ PYTHON_SINGLE_TARGET="python3_4"
 PYTHON_TARGETS="python2_7 python3_4"
 RESUMECOMMAND="wget -c -t 3 -T 60 --passive-ftp -O "${DISTDIR}/${FILE}" "${URI}""
 RESUMECOMMAND_RSYNC="rsync -avP "${URI}" "${DISTDIR}/${FILE}""
-RESUMECOMMAND_SSH="bash -c "x=\${2#ssh://} ; host=\${x%%/*} ; port=\${host##*:} ; host=\${host%:*} ; [[ \${host} = \${port} ]] && port= ; exec rsync --rsh=\"ssh \${port:+-p\${port}} \${3}\" -avP \"\${host}:/\${x#*/}\" \"\$1\"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
+RESUMECOMMAND_SSH="bash -c "x=\e${2#ssh://} ; host=\e${x%%/*} ; port=\e${host##*:} ; host=\e${host%:*} ; [[ \e${host} = \e${port} ]] && port= ; exec rsync --rsh=\e"ssh \e${port:+-p\e${port}} \e${3}\e" -avP \e"\e${host}:/\e${x#*/}\e" \e"\e$1\e"" rsync "${DISTDIR}/${FILE}" "${URI}" "${PORTAGE_SSH_OPTS}""
 ROOT="/"
 ROOTPATH="/usr/x86_64-pc-linux-gnu/gcc-bin/5.4.0:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin"
 RPMDIR="/usr/portage/rpm"
@@ -333,13 +408,12 @@ WINDOWID="14680375"
 WINDOWPATH="7"
 XAUTHORITY="/home/katt/.Xauthority"
 XTABLES_ADDONS="quota2 psd pknock lscan length2 ipv4options ipset ipp2p iface geoip fuzzy condition tee tarpit sysrq steal rawnat logmark ipmark dhcpmac delude chaos account"
-```
+.CE
 
-#### List of installed packages
-Running `equery list "*"`, I get a list of all the packages I have installed on
+.H4 "List of installed packages"
+Running \fCequery list "*"\fP, I get a list of all the packages I have installed on
 my computer. Feel free to pick them as you wish. :p
-
-```
+.CB
 app-accessibility/at-spi2-atk-2.22.0
 app-accessibility/at-spi2-core-2.22.1
 app-admin/eselect-1.4.8
@@ -882,40 +956,37 @@ x11-themes/gnome-themes-standard-3.22.3
 x11-themes/gtk-engines-adwaita-3.22.3
 x11-themes/hicolor-icon-theme-0.15
 x11-wm/i3-4.13-r1
-```
+.CE
 
-### Installed Vim plugins
-Vim plugins are installed with the help of
-[tpope/vim-pathogen](https://github.com/tpope/vim-pathogen). Here are all the
-Vim plugin's installed, placed in `~/.vim/bundle`. They are not included in this
-configurations repository.
+.H3 "Installed Vim plugins"
+Vim plugins are installed with the help of tpope/vim-pathogen (\fChttps://github.com/tpope/vim-pathogen\fP). Here are all the Vim plugin's installed, placed in \fC~/.vim/bundle\fP. They are not included in this configurations repository.
+.BB
+.LI "emmet-vim"
+.LI "lean.vim"
+.LI "lightline.vim"
+.LI "linediff.vim"
+.LI "loremipsum"
+.BE
 
-```
-~/.vim/bundle/
-├── emmet-vim
-├── lean.vim
-├── lightline.vim
-├── linediff.vim
-└── loremipsum
-
-5 directories, 0 files
-```
-
-### `iptables` rules
-Some `iptables` (net-firewall/iptables) rules. I don't know where to put them.
-
-```
-katt@gentoo ~ % sudo iptables -S 
+.H3 "iptables rules"
+Some \fCiptables\fP (net-firewall/iptables) rules. I don't know where to put them.
+.CB
+katt@gentoo ~ % sudo iptables -S
 -P INPUT DROP
 -P FORWARD ACCEPT
 -P OUTPUT ACCEPT
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 6667 -j ACCEPT
 
-katt@gentoo ~ % sudo ip6tables -S 
+katt@gentoo ~ % sudo ip6tables -S
 -P INPUT DROP
 -P FORWARD ACCEPT
 -P OUTPUT ACCEPT
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 6667 -j ACCEPT
-```
+.CE
+
+\" To compile this documentation:
+\" $ groff -Tdvi -Kutf8 README.roff > README.dvi
+\"
+\" vim: tw=0 cc=0 noet
