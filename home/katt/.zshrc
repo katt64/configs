@@ -18,7 +18,7 @@
 alias gf="gfortran"
 alias markdown="markdown_py"
 alias vi="vim" # Especially useful on BSD
-alias vpn="curl https://www.ovpn.com/v1/api/client/ptr" # Check if my VPN is good
+alias vpnstat="curl https://www.ovpn.com/v1/api/client/ptr" # Check if my VPN is good
 
 export PATH="${PATH}:/home/katt/.local/bin"
 
