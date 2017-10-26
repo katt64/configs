@@ -7,6 +7,7 @@ au FileType scss source ~/.vim/filetypes/web.vim
 au FileType javascript source ~/.vim/filetypes/web.vim
 au FileType fortran source ~/.vim/filetypes/fortran.vim
 au FileType nroff source ~/.vim/filetypes/nroff.vim
+au FileType conque_term source ~/.vim/filetypes/conque_term.vim
 
 "" Not language-specific stuff
 filetype plugin indent on
@@ -42,6 +43,9 @@ map gT :tabprevious<CR>
 map g$ :tablast<CR>
 map g0 :tabfirst<CR>
 map gc :tabclose<CR>
+
+"" Redefine INSERT mode's <C-w> that doesn't really make sense.
+inoremap <C-w> <Esc><C-w>
 
 "" Make Lightline smaller on smaller viewports
 let g:lightline = {

@@ -9,6 +9,7 @@ media-libs/imlib2 gif jpeg mp3 png tiff
 media-gfx/feh exif
 net-im/bitlbee otr
 media-gfx/gimp exif jpeg lcms png svg tiff udev
+app-editors/vim python
 
 # required by x11-drivers/xf86-video-ati-7.9.0::gentoo[glamor]
 # required by x11-base/xorg-drivers-1.19::gentoo[video_cards_radeonsi]

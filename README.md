@@ -891,14 +891,15 @@ Vim plugin's installed, placed in `~/.vim/bundle`. They are not included in this
 configurations repository.
 
 ```
-~/.vim/bundle/
+/home/katt/.vim/bundle/
+├── conque.vim
 ├── emmet-vim
 ├── lean.vim
 ├── lightline.vim
 ├── linediff.vim
 └── loremipsum
 
-5 directories, 0 files
+6 directories, 0 files
 ```
 
 ### `iptables` rules

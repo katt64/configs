@@ -17,8 +17,10 @@
 
 alias gf="gfortran"
 alias markdown="markdown_py"
+alias vi="vim" # Especially useful on BSD
+alias vpn="curl https://www.ovpn.com/v1/api/client/ptr" # Check if my VPN is good
 
-export PATH="${PATH}:~/.local/bin"
+export PATH="${PATH}:/home/katt/.local/bin"
 
 ## Inform users about upgrade path for grml's old zshrc layout, assuming that:
 ## /etc/skel/.zshrc was installed as ~/.zshrc,
