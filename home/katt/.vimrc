@@ -4,6 +4,7 @@ au FileType haml source ~/.vim/filetypes/web.vim
 au FileType css source ~/.vim/filetypes/web.vim
 au FileType sass source ~/.vim/filetypes/web.vim
 au FileType scss source ~/.vim/filetypes/web.vim
+au FileType markdown source ~/.vim/filetypes/web.vim
 au FileType javascript source ~/.vim/filetypes/web.vim
 au FileType fortran source ~/.vim/filetypes/fortran.vim
 au FileType nroff source ~/.vim/filetypes/nroff.vim
