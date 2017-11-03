@@ -39,6 +39,9 @@ map gc :tabclose<CR>
 "" Redefine INSERT mode's <C-w> that doesn't really make sense.
 inoremap <C-w> <Esc><C-w>
 
+"" EHH
+inoremap :)<3 😊❤️
+
 "" Make Lightline smaller on smaller viewports
 let g:lightline = {
       \ 'component_function': {

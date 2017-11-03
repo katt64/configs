@@ -32,3 +32,5 @@ hi bnfTerminalRangeDelim guifg=yellow gui=bold
 hi link bnfTerminalRange bnfTerminal
 hi link bnfQuoted bnfTerminal
 "hi link bnfLiteral 	 	String
+
+set tw=0 cc=0 nowrap
