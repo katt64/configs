@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/katt/.oh-my-zsh
@@ -58,7 +58,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colorize extract web-search vi-mode)
+plugins=(git sudo colorize extract npm)
 
 source $ZSH/oh-my-zsh.sh
 

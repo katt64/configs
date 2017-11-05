@@ -1,5 +1,6 @@
 " Some autocommands
 au bufreadpre,bufnewfile *.bnf set ft=bnf
+au BufRead,BufNewFile *.red setf redcode
 
 "" Not language-specific stuff
 filetype plugin indent on
