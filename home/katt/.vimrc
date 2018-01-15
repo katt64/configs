@@ -58,3 +58,15 @@ endfunction
 function! LightlineFiletype()
   return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
 endfunction
+
+let g:notebook_cmd='gp -q'
+let g:notebook_stop='quit()'
+let g:notebook_send='print(\"VIMPARIGPNOTEBOOK\");'
+let g:notebook_detect='VIMPARIGPNOTEBOOK'
+let g:notebook_send0=''
+let g:notebook_sendinit='default(\"readline\",0); default(\"colors\",\"no\");'
+map å :NotebookStart<CR>
+map ä :NotebookEvaluate<CR>
+map Ä :NotebookEvaluateAll<CR>
+map ö :NotebookRestart<CR>
+map Ö :NotebookStop<CR>

@@ -10,6 +10,11 @@ media-gfx/feh exif
 net-im/bitlbee otr
 media-gfx/gimp exif jpeg lcms png svg tiff udev
 app-editors/vim python
+mail-client/mutt gpg imap smtp
+media-sound/audacity ffmpeg mad
+media-gfx/imagemagick jpeg jpeg2k png postscript
+dev-python/ply python_targets_python3_6 -python_targets_python3_5 -python_targets_python2_7
+net-im/profanity gpg otr
 
 # required by x11-drivers/xf86-video-ati-7.9.0::gentoo[glamor]
 # required by x11-base/xorg-drivers-1.19::gentoo[video_cards_radeonsi]
@@ -38,3 +43,7 @@ app-editors/vim python
 # required by app-text/zathura-pdf-poppler-0.2.7::gentoo
 # required by zathura-pdf-poppler (argument)
 >=app-text/poppler-0.57.0 cairo
+# required by sci-visualization/gnuplot-5.0.1-r1::gentoo[gd]
+# required by sci-mathematics/maxima-5.38.1::gentoo[X]
+# required by sci-mathematics/maxima (argument)
+>=media-libs/gd-2.2.4 png

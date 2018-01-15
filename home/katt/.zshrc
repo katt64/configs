@@ -58,7 +58,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colorize extract npm)
+plugins=(git colored-man-pages sudo colorize extract npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +95,6 @@ alias gf="gfortran"
 alias markdown="markdown_py"
 alias vi="vim" # Especially useful on BSD
 alias vpnstat="curl https://www.ovpn.com/v1/api/client/ptr" # Check if my VPN is good
+alias rst="rst2html5.py"
+alias pc="pwd | xclip -sel clip"
+alias maxima="rmaxima"

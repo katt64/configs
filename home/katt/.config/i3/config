@@ -214,7 +214,7 @@ hide_edge_borders smart
 bindsym $mod+u exec "i3lock -f -c 000000"
 
 ## Calculator (PARI/GP)
-bindsym $mod+c exec "urxvtc -e 'gp'; exec i3-msg floating toggle"
+bindsym $mod+c exec "urxvtc -e 'dc'; exec i3-msg floating toggle"
 
 ## File manager (ranger)
 bindsym $mod+x exec "urxvtc -e 'ranger'; exec i3-msg floating toggle"
@@ -226,8 +226,8 @@ bindsym $mod+apostrophe exec "urxvtc; exec i3-msg floating toggle"
 bindcode 107 exec "/home/katt/.local/bin/takescrot"
 
 ## Switch outputs between two screens
-bindsym $mod+Shift+equal exec "xrandr --output LVDS1 --mode 1366x768"
-bindsym $mod+equal exec "xrandr --output LVDS1 --off"
+bindsym $mod+Shift+equal exec "xrandr --output LVDS1 --mode 1366x768; xrandr --output HDMI1 --off"
+bindsym $mod+equal exec "xrandr --output HDMI1 --mode 1920x1080; xrandr --output LVDS1 --off"
 
 ## Volume control
 bindsym $mod+bracketleft exec "amixer set Master 5-"
@@ -248,4 +248,4 @@ bindcode 121 exec "amixer set Master toggle"
 bindcode 122 exec "amixer set Master 5-"
 bindcode 123 exec "amixer set Master 5+"
 
-bindsym $mod+n exec "zathura /home/katt/books/troff/cstr54.pdf&"
+bindsym $mod+n exec "/home/katt/.local/bin/cstr54&"
